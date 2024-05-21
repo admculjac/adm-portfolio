@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Carrousel from "../components/Carrousel.astro";
+import Shorts from "../components/Shorts.astro";
+import ArrowDate from "../components/Arrow-date.astro";
+import PoligonAbout from "../components/Poligon-about.astro";
+import SliderClient from "../components/Slider-client.astro";
+import CardTestimony from "../components/Card-testimony.astro";
+import Form from "../components/Form.astro";
+import Particulas from "../components/Particulas.astro"
+import TicketInfitite from "../components/Ticket-infitite.astro";
+---
+
+<Layout title="ADAM ">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#trabajo">TRABAJO</a></li>
+				<li><a href="#testimonio">TESTIMONIOS</a></li>
+				<li><a href="#form">CONTACTA</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="home">
+		<h1>EDITOR DE VIDEOS</h1>
+		<p>
+			Ediciones estratégicas que cautivan y retienen audiencias con
+			impacto duradero.
+		</p>
+		<Particulas />
+	</section>
+	<section class="videos" id="trabajo">
+		<Carrousel />
+		<Particulas />
+	</section>
+	<TicketInfitite />
+	<section class="shorts">
+		<article class="content-short">
+			<Shorts />
+		</article>
+		<article class="detail-shorts">
+			<ArrowDate data="Edición estratégica" />
+			<ArrowDate data="Miles de visitas conseguidas" />
+			<ArrowDate data="Crecimiento de seguidores" />
+		</article>
+		<Particulas />
+	</section>
+	<section class="contribute">
+		<h2>¿PORQUE TRABAJAR CONMIGO?</h2>
+		<div class="contentPoligon3">
+			<PoligonAbout
+				title="ESTILO DE EDICIÓN UNICO"
+				text="Un estilo propio hace que tus videos se destaquen entre la multitud."
+				icon="/edit-unico.svg"
+			/>
+			<PoligonAbout
+				title="ATENCIÓN AL DETALLE"
+				text="Detalles precisos, movimientos fluidos, cortes coherentes: clave para calidad y percepción."
+				icon="/lupa.svg"
+			/>
+			<PoligonAbout
+				title="RELACIONES CON EL CLIENTE"
+				text="Construir relaciones sólidas, resolver preocupaciones, garantizar total satisfacción del cliente."
+				icon="/estrecho-manos.svg"
+			/>
+		</div>
+		<div class="contentPoligon2">
+			<PoligonAbout
+				title="ENTREGA PUNTUAL Y CONSISTENTE"
+				text="Entregas puntuales y consistentes, creando un clima agradable con el cliente."
+				icon="/reloj.svg"
+			/>
+			<PoligonAbout
+				title="ADAPTANDO A DISTINTOS ESTILOS"
+				text="Produzco contenido variado: corto y largo, desde documentales hasta videojuegos y más."
+				icon="/edit-unico.svg"
+			/>
+		</div>
+		<Particulas />
+	</section>
+	<TicketInfitite />
+	<section class="client" id="testimonio">
+		<article class="client-slider">
+			<SliderClient />
+		</article>
+		<article class="testimony">
+			<h2 class="title-testimony">TESTIMONIOS</h2>
+			<CardTestimony
+				imgPath="/client/client-3.png"
+				text="MI experiencia con Adam ha sido muy buena, es bastante amable, se ajusta a los tiempos muy bien ademas de acoplarse a mi estilo de edición y siempre sujeto a cambios en el resultado final, sin duda alguna es una muy buena opción si buscas una ayuda extra."
+				name="El Loquillo"
+			/>
+			<CardTestimony
+				imgPath="/client/client-4.png"
+				text="Adam, la verdad trabajar contigo fue increíble y sigue siendo increíble, eres una persona muy muy dedicada al trabajo, a lo que haces, le gusta ser muy abierto dando ideas, dando puntos de vista, y creo que un editor así vale mucho la pena. Una persona que trata de hacer todo lo más rápido posible para que el cliente este cómodo y este feliz con su trabajo, así que te recomiendo hermano 10/10, muy buenos precios, una persona muy buena, y se merece lo mejor."
+				name="Clark"
+			/>
+		</article>
+		<Particulas />
+	</section>
+	<section class="section-form" id="form">
+		<Form />
+		<Particulas />
+	</section>
+</Layout>

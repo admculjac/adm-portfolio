@@ -1,0 +1,54 @@
+---
+interface Props{
+    data: string
+}
+
+const {data} = Astro.props
+---
+<div class="content-arrow">
+    <div class="arrow">
+        <div class="arrow-line"></div>
+        <div class="circle"></div>
+    </div>
+    <p>
+        {data}
+    </p>
+</div>
+
+<style>
+    .content-arrow{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+        gap: 1rem;
+    }
+    .content-arrow .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+        height: 3rem;
+        position: relative;
+    }
+    .content-arrow .arrow-line{
+        width: 8em;
+        height: 1.5px;
+        background: var(--secondary-color);
+    }
+    .content-arrow .circle{
+        position: absolute;
+        height: 1em;
+        width: 1em;
+        border-radius: 100%;
+        background-color: var(--secondary-color);
+        right: 0;
+        
+    }
+    .content-arrow p{
+        font-weight: 400;
+        font-size: 1em;
+        color: var(--secondary-color);
+    }
+</style>

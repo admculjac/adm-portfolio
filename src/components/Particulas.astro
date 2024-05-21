@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="bubbles">
+        <div class="container">
+            <img src="/youtube.svg" alt="img-youtube" style="--i:15"/>
+            <img src="/tiktok.svg" alt="img-tiktok" style="--i:20"/>
+            <img src="/like.svg" alt="img-like" style="--i:13"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:17"/>
+            <img src="/client.svg" alt="client" style="--i:22"/>
+            <img src="/tiktok.svg" alt="img-tiktok" style="--i:11"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:28"/>
+            <img src="/play.svg" alt="img-play" style="--i:19"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:14"/>
+            <img src="/play.svg" alt="img-play" style="--i:16"/>
+            <img src="/cohete.svg" alt="img-cohete" style="--i:25"/>
+            <img src="/tiktok.svg" alt="img-tiktok" style="--i:12"/>
+            <img src="/play.svg" alt="img-play" style="--i:18"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:21"/>
+            <img src="/client.svg" alt="client" style="--i:23"/>
+            <img src="/like.svg" alt="img-like" style="--i:24"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:27"/>
+            <img src="/play.svg" alt="img-play" style="--i:26"/>
+            <img src="/cohete.svg" alt="img-cohete" style="--i:10"/>
+            <img src="/tiktok.svg" alt="img-tiktok" style="--i:15"/>
+            <img src="/play.svg" alt="img-play" style="--i:20"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:13"/>
+            <img src="/like.svg" alt="img-like" style="--i:17"/>
+            <img src="/tiktok.svg" alt="img-tiktok" style="--i:22"/>
+            <img src="/client.svg" alt="client" style="--i:11"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:28" class="mobile"/>
+            <img src="/cohete.svg" alt="img-cohete" style="--i:19" class="mobile"/>
+            <img src="/like.svg" alt="img-like" style="--i:14" class="mobile"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:16" class="mobile"/>
+            <img src="/play.svg" alt="img-play" style="--i:25" class="mobile"/>
+            <img src="/cohete.svg" alt="img-cohetecoetito" style="--i:12" class="mobile"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:18" class="mobile"/>
+            <img src="/like.svg" alt="img-like" style="--i:21" class="mobile"/>
+            <img src="/client.svg" alt="client" style="--i:23" class="mobile"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:24" class="mobile"/>
+            <img src="/like.svg" alt="img-like" style="--i:27" class="mobile"/>
+            <img src="/play.svg" alt="img-play" style="--i:26" class="mobile"/>
+            <img src="/youtube.svg" alt="img-youtube" style="--i:10" class="mobile"/>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: transparent;
+        z-index: -1;
+    }
+
+    .bubbles {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .bubbles img {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        margin: 0 4px;
+        animation: animate-particles 3s linear infinite;
+        animation-duration: calc(235s / var(--i));
+    }
+
+    .bubbles img:nth-child(even){
+
+    }
+
+    @keyframes animate-particles {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-2vh) scale(1);
+    }
+}
+
+@media screen and (max-width: 425px) {
+        /* Estilos que se aplicarán cuando el ancho de la pantalla sea 320px o menos */
+    .mobile{
+        display: none
+    }
+    .bubbles img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+</style>

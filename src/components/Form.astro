@@ -1,0 +1,295 @@
+<div class="content-form">
+    <form
+        class="form"
+        id="myForm"
+        action="https://formsubmit.co/fontanaroman891@gmail.com"
+        method="POST"
+    >
+        <h3 class="title-form">CONTACTA</h3>
+        <input
+            type="text"
+            placeholder="Nombre"
+            name="name"
+            class="input-form"
+            id="name"
+        />
+        <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            class="input-form"
+            id="email"
+        />
+        <input
+            type="text"
+            placeholder="Mensaje"
+            name="message"
+            class="input-form"
+            id="message"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <button class="form-button" type="submit">ENVIAR</button>
+    </form>
+    <div class="content-data">
+        <div class="info">
+            <h3 class="title-form">INFO</h3>
+            <div class="div-info">
+                <img src="/email.svg" alt="" />
+                <a href="mailto:adamculjak84@gmail.com">adam@gmail.com</a>
+            </div>
+            <div class="div-info">
+                <img src="/phone.svg" alt="" />
+                <p>+54-011 322 333</p>
+            </div>
+            <div class="div-info">
+                <img src="/reloj.svg" alt="" />
+                <p>8:00 - 18:00 GTM -3</p>
+            </div>
+        </div>
+        <div class="redes">
+            <img src="/instagram.svg" alt="" class="insta" />
+            <img src="/twitter.svg" alt="" class="twitter" />
+        </div>
+    </div>
+</div>
+
+<script>
+    const ig = document.querySelector(".insta");
+    const twit = document.querySelector(".twitter");
+
+    ig.addEventListener("click", function () {
+        window.open("https://www.instagram.com/admvfx?igsh=cnlnbnRhd2xreWlr", "_blank");
+    });
+
+    twit.addEventListener("click", function () {
+        window.open("https://twitter.com/AdmEditor", "_blank");
+    });
+</script>
+
+<style>
+    .content-form {
+        width: 60%;
+        height: 70%;
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .form {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        gap: 1.5rem;
+    }
+    .title-form {
+        width: 50%;
+        font-size: 3rem;
+    }
+    .input-form {
+        width: 50%;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .input-form::placeholder {
+        color: black;
+        font-size: 1.3rem;
+    }
+    .form-button {
+        width: 30%;
+        font-size: 1.2rem;
+        background: transparent;
+        border: none;
+    }
+    .form-button:hover {
+        background-color: #ecb961;
+    }
+    .content-data {
+        width: 40%;
+        height: 100%;
+        background-color: white;
+        overflow: hidden;
+        position: relative;
+    }
+    .info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        gap: 1.8rem;
+        padding-bottom: 2rem;
+    }
+    .info h3 {
+        width: 80%;
+        font-size: 3rem;
+    }
+    .div-info {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .div-info img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .div-info a {
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+    }
+    .div-info p {
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+    .redes {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        overflow: hidden;
+        display: flex;
+        justify-content: end;
+        padding-right: 2rem;
+        gap: 1rem;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .redes img {
+        width: 1.8rem;
+        height: 1.8rem;
+        transition: 0.3s ease-in-out;
+    }
+    .redes img:hover {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+
+    @media screen and (max-width: 425px) {
+        /* Estilos que se aplicarán cuando el ancho de la pantalla sea 320px o menos */
+        .content-form {
+            width: 80%;
+            height: 70%;
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .form {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            gap: 1.5rem;
+        }
+        .input-form {
+            width: 80%;
+        }
+        .content-data {
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .info h3 {
+            width: 80%;
+            font-size: 2rem;
+        }
+        .title-form {
+            width: 80%;
+            font-size: 2.3rem;
+        }
+    }
+
+    @media screen and (min-width: 1768px) {
+        .content-form .form h3 {
+            font-size: 4rem;
+        }
+
+        .content-form .form .input-form {
+            font-size: 2rem;
+        }
+
+        .content-form .form .form-button {
+            font-size: 2rem;
+        }
+
+        .content-form .content-data .info h3 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-form .content-data .info .div-info img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .content-form .content-data .info .div-info a {
+            font-size: 2rem;
+        }
+
+        .content-form .content-data .info .div-info p {
+            font-size: 2rem;
+        }
+
+        .content-form .content-data .redes img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    @media screen and (min-width: 2560px) {
+        .content-form .form h3 {
+            font-size: 10rem;
+        }
+
+        .content-form .form .input-form {
+            font-size: 5rem;
+        }
+
+        .content-form .form .form-button {
+            font-size: 5rem;
+        }
+
+        .content-form .content-data .info {
+            height: 91%;
+        }
+
+        .content-form .content-data .info h3 {
+            font-size: 10rem;
+        }
+
+        .content-form .content-data .info .div-info img {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .content-form .content-data .info .div-info a {
+            font-size: 4rem;
+        }
+
+        .content-form .content-data .info .div-info p {
+            font-size: 4rem;
+        }
+
+        .content-form .content-data .redes img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+</style>
